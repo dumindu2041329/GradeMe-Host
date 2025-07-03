@@ -99,11 +99,8 @@ app.use((req, res, next) => {
   // It is the only port that is not firewalled.
   const port = process.env.PORT || 5000;
   
-  // For Vercel, we export the app instead of listening
-  if (process.env.VERCEL) {
-    // Export for Vercel serverless
-    module.exports = app;
-  } else {
+  // For Vercel, we don't start the server
+  if (!process.env.VERCEL) {
     // Listen for local development and Replit
     server.listen({
       port,
