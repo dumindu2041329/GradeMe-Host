@@ -1,6 +1,6 @@
 {
   "buildCommand": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=cjs --outdir=dist",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/public",
   "installCommand": "npm install",
   "framework": null,
   "env": {
