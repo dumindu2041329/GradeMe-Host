@@ -246,6 +246,7 @@ GradeMe is a comprehensive exam management system designed for educational insti
 - July 3, 2025. **Applied landing page styles to password reset page** - Added consistent GradeMe header with logo and Three.js animated background to password reset form page, ensuring brand consistency across all authentication pages. The page now features the same gradient overlays, backdrop blur effects, and glassmorphism design as the landing page
 - July 3, 2025. **Fixed password reset functionality** - Resolved API response format mismatch between server and client. Server now returns consistent response format with success field and error field. Client now sends correct field name (newPassword) matching server expectations. Password reset now works properly with minimum 6 character validation
 - July 3, 2025. **Added Vercel deployment configuration** - Set up complete Vercel deployment infrastructure including vercel.json configuration, serverless function wrapper in api/index.js, environment variable documentation in .env.example, and comprehensive deployment guide in VERCEL_DEPLOYMENT.md. Server now exports app for Vercel serverless functions when VERCEL environment variable is detected
+- July 3, 2025. **Fixed Vercel deployment runtime error** - Removed explicit Node.js runtime version from vercel.json to allow Vercel to automatically detect the appropriate runtime, resolving "Function Runtimes must have a valid version" error during deployment
 
 ## User Preferences
 
