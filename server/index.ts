@@ -114,3 +114,4 @@ app.use((req, res, next) => {
 
 // Export for Vercel
 export default app;
+module.exports = app;
