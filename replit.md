@@ -109,6 +109,21 @@ GradeMe is a comprehensive exam management system designed for educational insti
 - Automatic table creation on startup
 - Seed data for admin and sample student accounts
 
+## Vercel Deployment Configuration
+
+### Setup Overview
+- **Configuration File**: `vercel.json` handles build and serverless function setup
+- **API Handler**: `api/index.js` serves as the serverless function entry point
+- **Build Output**: CommonJS format for Vercel compatibility
+- **Environment Variables**: Documented in `.env.example`
+- **Deployment Guide**: Complete instructions in `VERCEL_DEPLOYMENT.md`
+
+### Key Changes for Vercel
+- Server exports app for serverless functions when VERCEL env is detected
+- Build command outputs CommonJS format for compatibility
+- API routes handled through Vercel serverless functions
+- Static assets served through Vercel's CDN
+
 ## Changelog
 
 - June 13, 2025. Initial setup
@@ -230,6 +245,7 @@ GradeMe is a comprehensive exam management system designed for educational insti
 - July 3, 2025. **Improved toast notifications for mobile users** - Made close buttons always visible with proper touch targets (44px minimum), enhanced button styling with hover effects, and optimized toast container padding for better mobile accessibility and user experience
 - July 3, 2025. **Applied landing page styles to password reset page** - Added consistent GradeMe header with logo and Three.js animated background to password reset form page, ensuring brand consistency across all authentication pages. The page now features the same gradient overlays, backdrop blur effects, and glassmorphism design as the landing page
 - July 3, 2025. **Fixed password reset functionality** - Resolved API response format mismatch between server and client. Server now returns consistent response format with success field and error field. Client now sends correct field name (newPassword) matching server expectations. Password reset now works properly with minimum 6 character validation
+- July 3, 2025. **Added Vercel deployment configuration** - Set up complete Vercel deployment infrastructure including vercel.json configuration, serverless function wrapper in api/index.js, environment variable documentation in .env.example, and comprehensive deployment guide in VERCEL_DEPLOYMENT.md. Server now exports app for Vercel serverless functions when VERCEL environment variable is detected
 
 ## User Preferences
 
