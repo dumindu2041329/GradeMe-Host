@@ -5,8 +5,6 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "installCommand": "npm install",
-        "buildCommand": "vite build client --config vite.config.js",
         "outputDirectory": "client/dist"
       }
     },
