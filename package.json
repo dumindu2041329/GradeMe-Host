@@ -1,5 +1,4 @@
 {
-  "homepage": "https://dumindu2041329.github.io/GradeMe-Host/client/index.html",
   "name": "rest-express",
   "version": "1.0.0",
   "type": "module",
@@ -9,9 +8,7 @@
     "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
-    "db:push": "drizzle-kit push",
-    "predeploy": "npm run build && npm run db:push",
-    "deploy": "gh-pages -d dist"
+    "db:push": "drizzle-kit push"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -112,7 +109,6 @@
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
     "esbuild": "^0.25.0",
-    "gh-pages": "^6.3.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.17",
     "tsx": "^4.20.3",
