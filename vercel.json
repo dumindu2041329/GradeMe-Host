@@ -1,23 +1,17 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "server/index.ts",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "vite.config.js",
-      "use": "@vercel/vite",
-      "config": { "project": "client" }
+  "functions": {
+    "server/index.ts": {
+      "memory": 1024
     }
-  ],
+  },
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "/server/index.ts"
     },
     {
-      "source": "/:path*",
+      "source": "/((?!api/|favicon.svg|assets/).*)",
       "destination": "/index.html"
     }
   ]
